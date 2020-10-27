@@ -12,7 +12,10 @@ const routes = [
   },
   {
     path: '/about', name: 'About', component: () => import('../views/About.vue')
-  }
+  },
+  {
+    path: '/Appointment', name: 'Appointment', component: () => import('../views/Appointment.vue')
+  },
 ]
 
 const router = new VueRouter({

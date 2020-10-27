@@ -5,6 +5,19 @@
         <van-icon name="search" size="18" />
       </template>
     </van-nav-bar>
+    <!-- 下拉菜单 -->
+    <van-dropdown-menu>
+      <van-dropdown-item v-model="value1" :options="option1" />
+      <van-dropdown-item v-model="value2" :options="option2" />
+      <van-dropdown-item v-model="value3" :options="option3" />
+    </van-dropdown-menu>
+    <!-- 模拟考试 -->
+    <div class="pack-card">
+      <div class="empty">
+        <img src="https://wap.365msmk.com/img/empty.0d284c2e.png" alt />
+        <p>请稍等，模拟考正在赶来得路上啦</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,7 +32,29 @@ export default {
   components: {},
   // 组件状态值
   data() {
-    return {};
+    return {
+      value1: 0,
+      value2: "a",
+      value3: "one",
+      option1: [
+        { text: "考试类型", value: 0 },
+        { text: "全部", value: 1 },
+        { text: "模拟考试", value: 2 },
+        { text: "正式考试", value: 3 }
+      ],
+      option2: [
+        { text: "考试状态", value: "a" },
+        { text: "全部", value: "b" },
+        { text: "进行中", value: "c" },
+        { text: "已结束", value: "d" }
+      ],
+      option3: [
+        { text: "参考状态", value: "one" },
+        { text: "全部", value: "two" },
+        { text: "已做", value: "three" },
+        { text: "未做", value: "fore" }
+      ]
+    };
   },
   // 计算属性
   computed: {},
@@ -80,9 +115,30 @@ export default {
 };
 </script> 
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<!--使用了scoped属性之后，父组件的style样式将不会渗透到子组件中，-->
-<!--然而子组件的根节点元素会同时被设置了scoped的父css样式和设置了scoped的子css样式影响，-->
-<!--这么设计的目的是父组件可以对子组件根元素进行布局。-->
+
 <style scoped>
+.van-dropdown-item {
+  text-align: center;
+}
+.pack-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .8rem;
+}
+.empty {
+  flex-direction: column;
+}
+img {
+  width: 4rem;
+  width: 40vw;
+  height: 4rem;
+  height: 40vw;
+}
+p {
+  font-size: 0.4rem;
+  font-size: 4vw;
+  color: #8c8c8c;
+  margin-top: 0.53333rem;
+  margin-top: 5.33333vw;
+}
 </style>

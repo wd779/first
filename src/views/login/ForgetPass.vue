@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { AjaxLogin, AjaxSmsLogin } from "@/utils/api";
+import { AjaxPass, AjaxSmsLogin } from "@/utils/api";
 export default {
   // 组件名称
   name: "",
@@ -37,8 +37,7 @@ export default {
       sms_code: "",
       password: "",
       mobile: "",
-      sms_type: "getPassword",
-      type: 1,
+      sms_type: "getPassword"
     };
   },
   // 计算属性
@@ -48,11 +47,11 @@ export default {
   // 组件方法
   methods: {
     async onSubmit(values) {
-      let res = await AjaxLogin({
-          mobile: this.mobile,
+      let res = await AjaxPass({
+        mobile: this.mobile,
         password: this.password,
         sms_code: this.sms_code,
-        type:this.type
+        type: this.type
       });
       // 修改密码
       console.log("submit", values);

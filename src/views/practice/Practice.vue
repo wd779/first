@@ -96,19 +96,29 @@
         <p>暂无模考，敬请期待</p>
       </div>
     </div>
+<<<<<<< HEAD
     <tabbar />
+=======
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 import tabbar from "../tabbar";
+=======
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
 export default {
   data() {
     return {};
   },
   created() {},
   components: {
+<<<<<<< HEAD
     tabbar
+=======
+    // tabbar
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
   },
   mounted() {},
   watch: {},
@@ -237,6 +247,12 @@ h3 {
     }
   }
 }
+<<<<<<< HEAD
+=======
+.empty{
+    text-align: center;
+}
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
 .empty img {
   width: 2.3rem;
   margin-bottom: 0.4rem;

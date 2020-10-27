@@ -2,6 +2,7 @@
   <div>
     <van-nav-bar title="题库选择" left-text left-arrow @click-left="onClickLeft" />
     <!-- 搜索框 -->
+<<<<<<< HEAD
     <van-search v-model="value" shape="round" background="#fff" placeholder="请输入题库名称关键词" />
   <!-- 拉下选择 -->
   <div class="select-container">
@@ -16,6 +17,33 @@
   </div>
   
   
+=======
+    <van-search shape="round" background="#fff" placeholder="请输入题库名称关键词" />
+    <!-- 拉下选择 -->
+    <!-- <div class="select-container">
+      <div class="left">
+        <div class="item active">求导题库</div>
+        <div class="item">极限题库</div>
+        <div class="item">生物</div>
+        <div class="item">化学</div>
+        <div class="item">数学</div>
+      </div>
+      <div class="right">
+        <div class="classify-name">洛必达法则</div>
+        <div class="bank-list">
+          <div class="bank-warp">
+            <span class="bank active">数学</span>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <van-tree-select
+      :items="items"
+      :active-id.sync="activeId"
+      :main-active-index.sync="activeIndex"
+      @click-item="fyhdata"
+    />
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
   </div>
 </template>
 
@@ -30,7 +58,37 @@ export default {
   components: {},
   // 组件状态值
   data() {
+<<<<<<< HEAD
     return {};
+=======
+    return {
+      items: [
+        {
+          text: "求导题库",
+          children: [
+            {
+              text: "洛必达法则",
+              id: 2
+            }
+          ]
+        },
+        {
+          text: "极限题库",
+          children: [
+            {
+              text: "数学",
+              id: 2
+            }
+          ]
+        },
+        { text: "生物", children: [] },
+        { text: "化学", children: [] },
+        { text: "数学", children: [] }
+      ],
+      activeId: 1,
+      activeIndex: 0
+    };
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
   },
   // 计算属性
   computed: {},
@@ -41,6 +99,12 @@ export default {
     onClickLeft() {
       // 返回上一级
       this.$router.go(-1);
+<<<<<<< HEAD
+=======
+    },
+    fyhdata() {
+      this.$router.push("/shu");
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
     }
   },
   // 以下是生命周期钩子 注：没用到的钩子请自行删除
@@ -96,4 +160,41 @@ export default {
 <!--然而子组件的根节点元素会同时被设置了scoped的父css样式和设置了scoped的子css样式影响，-->
 <!--这么设计的目的是父组件可以对子组件根元素进行布局。-->
 <style scoped>
+<<<<<<< HEAD
+=======
+.selector-container {
+  min-height: 100%;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  flex-grow: 1;
+}
+.left {
+  width: 2.8rem;
+}
+.item {
+  font-size: 0.4rem;
+  font-size: 4vw;
+  color: #595959;
+  box-sizing: border-box;
+  padding: 0.48rem 0.61333rem;
+  padding: 4.8vw 6.13333vw;
+}
+.right {
+  margin-right: 0.53333rem;
+  margin-right: 5.33333vw;
+  flex: 1;
+}
+.classify-name {
+  font-size: 0.32rem;
+  font-size: 3.2vw;
+  color: #595959;
+  margin-bottom: 0.4rem;
+  margin-bottom: 4vw;
+  font-weight: 400;
+}
+.van-ellipsis {
+  background: rgb(233, 186, 186);
+  width: 30.93333vw;
+}
+>>>>>>> 905f774eeea0760edf166758788d86209834ac12
 </style>

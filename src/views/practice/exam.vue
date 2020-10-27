@@ -127,6 +127,7 @@ export default {
 }
 .empty {
   flex-direction: column;
+  text-align: center;
 }
 img {
   width: 4rem;

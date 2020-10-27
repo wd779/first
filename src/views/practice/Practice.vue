@@ -235,6 +235,9 @@ h3 {
     }
   }
 }
+.empty{
+    text-align: center;
+}
 .empty img {
   width: 2.3rem;
   margin-bottom: 0.4rem;

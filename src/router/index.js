@@ -10,12 +10,10 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/about', name: 'About', component: () => import('../views/About.vue')
-  },
-  {
-    path: '/Appointment', name: 'Appointment', component: () => import('../views/Appointment.vue')
-  },
+  {path: '/login', name: 'Login', component: () => import('../views/login/Login.vue')}, // 密码登录
+  {path: '/lorgetPass', name: 'ForgetPass', component: () => import('../views/login/ForgetPass.vue')}, // 修改密码
+  {path: '/smsLogin', name: 'SmsLogin', component: () => import('../views/login/SmsLogin.vue')}, // 验证码登录
+  {path: '/Appointment', name: 'Appointment', component: () => import('../views/Appointment.vue')}, // 课程
 ]
 
 const router = new VueRouter({

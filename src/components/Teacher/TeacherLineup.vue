@@ -37,7 +37,6 @@ export default {};
 <style scoped>
 .teacher_con {
   width: 100%;
-  /* height: 3.5rem; */
 }
 .teacher_warpper {
   width: 100%;

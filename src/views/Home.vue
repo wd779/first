@@ -11,22 +11,21 @@
     <Title>名师阵容</Title>
     <Teacher></Teacher>
     <!-- 精品课程 -->
-     <Title>精品课程</Title>
-    <Card></Card>
+    <Title>精品课程</Title>
+    <Crad></Crad>
     <!-- 明星讲师 -->
     <Title>明星讲师</Title>
     <RenownedTeacher></RenownedTeacher>
-   
   </div>
 </template>
 
 <script>
-import Title from "../components/Renownedteacher/Renowned_teacher_border"
-import Card from "../components/Card"
 import Swiper from "../components/Swiper/Swiper"; //轮播图
 import IconBotton from "../components/iconBotton/iconBotton"; //按钮 图标
 import Teacher from "../components/Teacher/TeacherLineup"; //名师阵容
 import RenownedTeacher from "../components/Renownedteacher/renownedteacher"; //明星讲师
+import Crad from "../components/Card";  //精品课程
+import Title from "../components/Renownedteacher/Renowned_teacher_border";  //home页  分类标签组件
 export default {
   name: "Home",
   components: {
@@ -34,8 +33,8 @@ export default {
     IconBotton,
     Teacher,
     RenownedTeacher,
+    Crad,
     Title,
-    Card,
   },
 
   data() {
@@ -51,12 +50,17 @@ export default {
 };
 </script>
 <style scoped>
-.con{
+.home{
+  height: 90vh;
+  overflow: scroll;
+  margin-bottom: 64px;
+}
+.con {
   width: 100%;
   height: 3rem;
   position: relative;
 }
-.icon{
+.icon {
   width: 100%;
   position: absolute;
   bottom: 0.3rem;

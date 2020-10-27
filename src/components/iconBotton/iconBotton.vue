@@ -4,11 +4,11 @@
       <div class="icon_warpper">
         <div class="icon_botton">
           <ul>
-            <li>
+            <li @click="onClick">
               <img src="../../assets/imgs/特色课.png" alt="" />
               <p>特色课</p>
             </li>
-            <li>
+            <li @click="onClick2">
               <img src="../../assets/imgs/一对一.png" alt="" />
               <p>一对一辅导</p>
             </li>
@@ -24,7 +24,23 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods:{
+    // 点击进入 课程
+    onClick(){
+      this.$router.push({
+        path:'/Appointment'
+      })
+    },
+
+    // 点击进入一对一辅导
+    onClick2(){
+      this.$router.push({
+        path:"/fudao"
+      })
+    }
+  }
+};
 </script>
 
 <style scoped>

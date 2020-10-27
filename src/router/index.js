@@ -26,12 +26,10 @@ const routes = [
   { path: '/login', name: 'Login', component: () => import('../views/login/Login.vue') }, // 密码登录
   { path: '/forgetPass', name: 'ForgetPass', component: () => import('../views/login/ForgetPass.vue') }, // 修改密码
   { path: '/smsLogin', name: 'SmsLogin', component: () => import('../views/login/SmsLogin.vue') }, // 验证码登录
-
-
-
-
-
-
+  // 一对一辅导页面
+  {
+    path: '/fudao', name: 'fudao', component: () => import('../views/Home/FuDao.vue')
+  }
 ]
 const router = new VueRouter({
   routes

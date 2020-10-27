@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-      <!-- 登录页面 -->
+    <!-- 登录页面 -->
     <!-- logo -->
     <div class="logo">
       <img src="../../assets/2019pILfAg7Avr1567732916.png" alt />
@@ -36,7 +36,7 @@ export default {
     return {
       mobile: "",
       password: "",
-      type:1
+      type: 1
     };
   },
   // 计算属性
@@ -45,13 +45,18 @@ export default {
   watch: {},
   // 组件方法
   methods: {
-   async onSubmit(values) {
-       let res = await AjaxLogin({
-           mobile:this.mobile,
-           password:this.password,
-           type:this.type
-       })
-      // 登录
+    // 登录
+    async onSubmit(values) {
+      let res = await AjaxLogin({
+        mobile: this.mobile,
+        password: this.password,
+        type: this.type
+      });
+      if (res.code == 200) {
+        sessionStorage.setItem("token", res.data.remember_token);
+        this.$toast.success("登录成功");
+        this.$router.push("/mine");
+      }
       console.log("submit", values);
       console.log(res);
     }
@@ -77,7 +82,6 @@ export default {
   }
   .van-form {
     padding: 0 0.4rem;
-  
   }
   .pass {
     font-size: 0.12rem;

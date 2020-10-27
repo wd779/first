@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    123
+     <router-view></router-view>
   </div>
 </template>
 

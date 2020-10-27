@@ -6,11 +6,8 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Dome',
-    component: () => import('../views/Dome.vue'),
-    redirect: '/home',
-    children: [ // 二级路由
+    path: '/', name: 'Dome', component: () => import('../views/Dome.vue'),redirect: '/home',  
+    children: [
       { path: 'home', name: 'Home', component: Home },//首页
       { path: 'mine', name: 'mine', component: () => import('../views/mine.vue') }, // 我的
       { path: 'Appointment', name: 'Appointment', component: () => import('../views/Appointment.vue') }, // 课程

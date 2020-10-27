@@ -35,7 +35,14 @@ export default {
    * 组件实例创建完成，属性已绑定，但DOM还未生成，$ el属性还不存在
    */
   created() {},
-  mounted() {}
+  mounted() {},
+  //  路由组件首位
+  beforeRouteEnter: (to, from, next) => {
+    if (!sessionStorage.getItem("token")) {
+      next("/login");
+    }
+    next();
+  }
 };
 </script> 
 

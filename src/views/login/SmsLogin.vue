@@ -48,6 +48,7 @@ export default {
   watch: {},
   // 组件方法
   methods: {
+    // 登录
     async onSubmit(values) {
       let res = await AjaxLogin({
         mobile: this.mobile,
@@ -55,7 +56,11 @@ export default {
         client: this.client,
         type: this.type
       });
-      // 登录
+      if (res.code == 200) {
+        sessionStorage.setItem("token", res.data.remember_token);
+        this.$toast.success("登录成功");
+        this.$router.push("/mine");
+      }
       console.log("submit", values);
       console.log(res);
     },
@@ -63,8 +68,11 @@ export default {
     async sms() {
       let res = await AjaxSmsLogin({
         mobile: this.mobile,
-        sms_type:'login'
+        sms_type: "login"
       });
+      if (res.code == 200) {
+        this.$toast.success("发送成功");
+      }
       console.log(res);
     }
   },

@@ -56,12 +56,20 @@ export default {
       // 修改密码
       console.log("submit", values);
       console.log(res);
+      if (res.code == 200) {
+        this.$toast.success("修改成功");
+        this.$router.push("/login");
+      }
     },
+    // 验证码
     async editPass() {
       let res = await AjaxSmsLogin({
         mobile: this.mobile,
         sms_type: this.sms_type
       });
+      if (res.code == 200) {
+        this.$toast.success("发送成功");
+      }
       console.log(res);
     }
   },

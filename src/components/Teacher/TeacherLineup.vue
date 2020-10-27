@@ -2,9 +2,6 @@
   <div>
     <div class="teacher_con">
       <div class="teacher_warpper">
-        <div class="teacher_border">
-          <p>名师阵容</p>
-        </div>
 
         <div class="teacher_content">
           <div class="teacher_content_warpper">
@@ -40,26 +37,14 @@ export default {};
 <style scoped>
 .teacher_con {
   width: 100%;
-  height: 3.5rem;
+  /* height: 3.5rem; */
 }
 .teacher_warpper {
   width: 100%;
-  height: 3.5rem;
+  /* height: 3.5rem; */
   /* border: 1px solid #000; */
 }
-.teacher_border {
-  width: 100%;
-  height: 0.23rem;
-  display: flex;
-}
-.teacher_border p {
-  width: 90%;
-  text-indent: 0.1rem;
-  color: #595959;
-  /* background: #f0f2f5; */
-  border-left: 3px solid red;
-  margin-left: 10px;
-}
+
 .teacher_content {
   width: 100%;
   height: 0.8rem;

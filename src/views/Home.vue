@@ -8,13 +8,21 @@
     </div>
 
     <!-- 名师阵容 -->
+    <Title>名师阵容</Title>
     <Teacher></Teacher>
+    <!-- 精品课程 -->
+     <Title>精品课程</Title>
+    <Card></Card>
     <!-- 明星讲师 -->
+    <Title>明星讲师</Title>
     <RenownedTeacher></RenownedTeacher>
+   
   </div>
 </template>
 
 <script>
+import Title from "../components/Renownedteacher/Renowned_teacher_border"
+import Card from "../components/Card"
 import Swiper from "../components/Swiper/Swiper"; //轮播图
 import IconBotton from "../components/iconBotton/iconBotton"; //按钮 图标
 import Teacher from "../components/Teacher/TeacherLineup"; //名师阵容
@@ -26,6 +34,8 @@ export default {
     IconBotton,
     Teacher,
     RenownedTeacher,
+    Title,
+    Card,
   },
 
   data() {

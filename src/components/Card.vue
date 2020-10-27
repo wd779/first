@@ -1,12 +1,12 @@
 <template>
   <div class="box_container">
     <div class="box_wrapper">
-      <h6>{{ data.title }}</h6>
-      <p>{{ data.desc }}</p>
+      <h6>{{ datas.title }}</h6>
+      <p>{{ datas.desc }}</p>
       <div class="user">
-        <img :src="data.img" />
+        <img :src="datas.img" />
         <span>
-          {{ data.name }}
+          {{ datas.name }}
         </span>
       </div>
 
@@ -23,13 +23,20 @@ export default {
   props: {
     data: {
       type: Object,
-      default: {
-        title: "标题",
-        desc: "描述",
-        img:
-          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603780371383&di=418f70b09f7c380e134464456dd454f2&imgtype=0&src=http%3A%2F%2Fimg02.fs.yiban.cn%2F43259453%2Favatar%2Fuser%2F200",
-        name: "姓名",
+      default: function () {
+        return {
+          title: "标题",
+          desc: "描述",
+          img:
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603780371383&di=418f70b09f7c380e134464456dd454f2&imgtype=0&src=http%3A%2F%2Fimg02.fs.yiban.cn%2F43259453%2Favatar%2Fuser%2F200",
+          name: "姓名",
+        };
       },
+    },
+  },
+  computed: {
+    datas() {
+      return this.data;
     },
   },
 };
@@ -37,11 +44,11 @@ export default {
 
 <style lang="scss" scoped>
 .box_container {
-    height: 1.5rem;
+  height: 1.5rem;
   margin: 1vw;
   width: 98vw;
   background: white;
-  box-shadow: 3px 1px  5px #ccc;
+  box-shadow: 3px 1px 5px #ccc;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -57,7 +64,7 @@ export default {
     overflow: hidden;
   }
   p {
-      margin-top: 0.1rem ;
+    margin-top: 0.1rem;
     width: 100%;
     display: -webkit-box;
     -webkit-box-orient: vertical;

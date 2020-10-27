@@ -2,10 +2,6 @@
   <div>
     <div class="Renowned_teacher_con">
       <div class="Renowned_teacher_warpper">
-        <div class="Renowned_teacher_border">
-          <p>明星讲师</p>
-        </div>
-
         <div class="Renowned_teacher_content">
           <div class="Renowned_teacher_content_warpper">
             <!-- 左侧图片盒子 -->
@@ -40,25 +36,12 @@ export default {};
 <style scoped>
 .Renowned_teacher_con {
   width: 100%;
-  height: 3.5rem;
+  /* height: 3.5rem; */
 }
 .Renowned_teacher_warpper {
   width: 100%;
-  height: 3.5rem;
+  /* height: 3.5rem; */
   /* border: 1px solid #000; */
-}
-.Renowned_teacher_border {
-  width: 100%;
-  height: 0.23rem;
-  display: flex;
-}
-.Renowned_teacher_border p {
-  width: 90%;
-  text-indent: 0.1rem;
-  color: #595959;
-  /* background: #f0f2f5; */
-  border-left: 3px solid red;
-  margin-left: 10px;
 }
 .Renowned_teacher_content {
   width: 100%;

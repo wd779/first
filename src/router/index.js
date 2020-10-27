@@ -10,6 +10,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {path: '/mine', name: 'mine', component: () => import('../views/mine.vue')}, // 我的
   {path: '/login', name: 'Login', component: () => import('../views/login/Login.vue')}, // 密码登录
   {path: '/lorgetPass', name: 'ForgetPass', component: () => import('../views/login/ForgetPass.vue')}, // 修改密码
   {path: '/smsLogin', name: 'SmsLogin', component: () => import('../views/login/SmsLogin.vue')}, // 验证码登录
